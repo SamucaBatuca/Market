@@ -9,6 +9,9 @@ namespace Market.DBConection
 
         public DbSet<Product> Product{get; private set;}
         public DbSet<Client> Client{get; private set;}
+        public DbSet<Client> Employee{get; private set;}
+        public DbSet<Client> Supplier{get; private set;}
+        public DbSet<Client> CashRegis{get; private set;}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -21,7 +24,19 @@ namespace Market.DBConection
 
             modelBuilder.Entity<Client>()
                 .Property(p => p.Regis_Client)
-                .HasDefaultValueSql("now()");    
+                .HasDefaultValueSql("now()");
+
+            modelBuilder.Entity<Employee>()
+                .Property(p => p.Regis_Employee)
+                .HasDefaultValueSql("now()");
+
+            modelBuilder.Entity<Supplier>()
+                .Property(p => p.Regis_Supplier)
+                .HasDefaultValueSql("now()");   
+
+            modelBuilder.Entity<CashRegister>()
+                .Property(p => p.Last_Update)
+                .HasDefaultValueSql("now()");
         }
 
     }

@@ -25,6 +25,11 @@ namespace Market.Objects
             this.Name_Client = Name_Client; 
         }
 
+        public void AddLocate(string City_Client, string Estate_Client)
+        {
+            this.City_Client = City_Client;
+            this.Estate_Client = Estate_Client;
+        }
 
     }
 }
