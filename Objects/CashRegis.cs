@@ -6,6 +6,7 @@ namespace Market.Objects
 {
     public class CashRegister
     {
+        // Atributes
         [Key]
         public int Id_CashRegister { get; private set; }
         public decimal Total_Sales { get; private set; }
@@ -13,6 +14,7 @@ namespace Market.Objects
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)] 
         public DateTime Last_Update { get; private set; }
 
+        // Methods
         protected CashRegister() { }
 
         public CashRegister(decimal Total_Sales, DateTime Last_Update)

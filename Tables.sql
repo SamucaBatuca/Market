@@ -42,7 +42,6 @@ CREATE TABLE Caixa(
 
 CREATE TABLE Nota_Compra(
 	id_Compra SERIAL PRIMARY KEY,
-	Data_Compra DATE NOT NULL,
 	fk_id_Fornecedor INTEGER NOT NULL, 
 	fk_id_Produto INTEGER NOT NULL,
 	Valor_Compra NUMERIC(10,2) NOT NULL,

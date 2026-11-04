@@ -4,8 +4,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Market.Objects
 {
-    class Employee
+    public class Employee
     {
+        // Atributes
         [Key]
         public int Id_Employee { get; private set; }
         public string CPF_Employee { get; private set; }
@@ -16,6 +17,7 @@ namespace Market.Objects
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public DateTime Regis_Employee { get; private set; }
 
+        // Methods
         protected Employee() { }
 
         public Employee(string CPF_Employee, string Name_Employee, string Role, decimal Salary)

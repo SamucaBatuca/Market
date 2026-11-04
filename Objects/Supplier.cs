@@ -4,8 +4,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Market.Objects
 {
-    class Supplier
+    public class Supplier
     {
+        // Atributes
         [Key]
         public int Id_Supplier { get; private set; }
         public string CNPJ_Supplier { get; private set; }
@@ -14,6 +15,7 @@ namespace Market.Objects
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public DateTime Regis_Supplier { get; private set; }
 
+        // Methods
         protected Supplier() { }
 
         public Supplier(string CNPJ_Supplier, string Name_Supplier)
